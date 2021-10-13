@@ -14,9 +14,9 @@ var _package = require('../package.json');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // 入口文件
+// 入口文件
 
-var actionMap = {
+let actionMap = {
   init: {
     description: 'generate a new project from a template',
     usages: ['lerna-tuya init projectName']
@@ -26,11 +26,11 @@ var actionMap = {
 
 // 添加 init 命令
 
-Object.keys(actionMap).forEach(function (action) {
-  _commander2.default.command(action).description(actionMap[action].description).alias(actionMap[action].alias).action(function () {
+Object.keys(actionMap).forEach(action => {
+  _commander2.default.command(action).description(actionMap[action].description).alias(actionMap[action].alias).action(() => {
     switch (action) {
       case 'init':
-        _utils.apply.apply(undefined, [action].concat(_toConsumableArray(process.argv.slice(3))));
+        (0, _utils.apply)(action, ...process.argv.slice(3));
         break;
       // 可扩展其他命令
       default:
@@ -41,8 +41,8 @@ Object.keys(actionMap).forEach(function (action) {
 
 function help() {
   console.log('\r\nUsage:');
-  Object.keys(actionMap).forEach(function (action) {
-    actionMap[action].usages.forEach(function (usage) {
+  Object.keys(actionMap).forEach(action => {
+    actionMap[action].usages.forEach(usage => {
       console.log(' - ' + usage);
     });
   });
