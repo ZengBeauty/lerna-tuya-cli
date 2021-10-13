@@ -6,6 +6,9 @@
   "bin": {
     "lerna-tuya": "./bin/www"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "compile": "babel src -d dist",
     "watch": "npm run compile -- --watch"
