@@ -1,6 +1,6 @@
 {
   "name": "lerna-tuya-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "涂鸦基础组件库单包脚手架",
   "author": "ZengBeauty <2497752603@qq.com>",
   "bin": {
