@@ -1,14 +1,11 @@
 {
   "name": "lerna-tuya-cli",
-  "version": "1.0.2",
+  "version": "0.0.0",
   "description": "涂鸦基础组件库单包脚手架",
   "author": "ZengBeauty <2497752603@qq.com>",
   "bin": {
     "lerna-tuya": "./bin/www"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "compile": "babel src -d dist",
     "watch": "npm run compile -- --watch"

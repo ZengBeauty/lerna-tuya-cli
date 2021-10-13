@@ -78,7 +78,6 @@ __tests__/build/*
 
 build
 
-dist
 !example/dist
 lib
 lib/*
